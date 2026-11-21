@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS EXPRESS — Kirim Cepat, Usaha Melesat! | www.jseexpress.com</title>
+  <meta name="description" content="JS EXPRESS (Since 2026) — Solusi Pengiriman Kilat & Terpercaya untuk Sukseskan Bisnismu. Kirim Cepat, Sampai Selamat. Kunjungi www.jseexpress.com atau hubungi 087873876864." />
+  <link rel="canonical" href="https://www.jseexpress.com" />
+  <meta property="og:title" content="JS EXPRESS — Kirim Cepat, Usaha Melesat!" />
+  <meta property="og:description" content="Solusi Pengiriman Kilat & Terpercaya untuk Sukseskan Bisnismu. Kirim Cepat, Sampai Selamat." />
+  <meta property="og:url" content="https://www.jseexpress.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0C',
+            charcoal: '#141418',
+            surface: '#1B1B21',
+            gold: {
+              light: '#F9E076',
+              DEFAULT: '#D4AF37',
+              bright: '#F5C84C',
+              dark: '#9E7B1C'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Montserrat"', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold': '0 10px 30px -5px rgba(212, 175, 55, 0.28)',
+            'gold-lg': '0 20px 45px -10px rgba(245, 200, 76, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0C;
+      color: #F5F5F7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F9E076 0%, #F5C84C 45%, #D4AF37 75%, #B88B1E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #F5C84C 0%, #D4AF37 55%, #B5891D 100%);
+    }
+
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      transition: all 0.3s ease;
+    }
+    .gold-border-glow:hover {
+      border-color: rgba(245, 200, 76, 0.75);
+      box-shadow: 0 12px 32px -8px rgba(212, 175, 55, 0.25);
+    }
+
+    /* Speed lines inspired by JS Express poster */
+    .speed-lines {
+      background-image: repeating-linear-gradient(
+        -25deg,
+        rgba(212, 175, 55, 0.06) 0px,
+        rgba(212, 175, 55, 0.06) 2px,
+        transparent 2px,
+        transparent 18px
+      );
+    }
+
+    .hero-radial {
+      background: radial-gradient(circle at 72% 35%, rgba(212, 175, 55, 0.16) 0%, rgba(10, 10, 12, 0.95) 60%, #0A0A0C 100%);
+    }
+
+    @keyframes pulseGold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 200, 76, 0.45); }
+      50% { box-shadow: 0 0 0 10px rgba(245, 200, 76, 0); }
+    }
+    .pulse-gold {
+      animation: pulseGold 2.5s infinite;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian">
+
+  <!-- TOP UTILITY BAR -->
+  <div class="bg-charcoal border-b border-gold/20 text-xs text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <a href="https://www.jseexpress.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-gold-bright font-semibold hover:underline">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          www.jseexpress.com
+        </a>
+        <span class="hidden sm:inline text-gray-600">|</span>
+        <span class="hidden sm:inline text-gray-400">Tagline Resmi: <strong class="text-white">"Kirim Cepat, Sampai Selamat"</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/6287873876864" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-gold-bright transition">
+          <svg class="w-3.5 h-3.5 text-gold-bright" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          087873876864
+        </a>
+        <span class="text-gray-600">|</span>
+        <span class="text-gold font-medium">@jsexpress.id</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Custom Brand Logo SVG (JS Express Since 2026) -->
+      <a href="#beranda" class="flex items-center gap-3.5 group">
+        <svg class="w-12 h-12 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo JS Express">
+          <defs>
+            <linearGradient id="goldLogoGrad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F9E076"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#9E7B1C"/>
+            </linearGradient>
+          </defs>
+          <!-- Two Human Figures (Heads) -->
+          <circle cx="33" cy="22" r="8.5" fill="url(#goldLogoGrad)"/>
+          <circle cx="87" cy="22" r="8.5" fill="url(#goldLogoGrad)"/>
+          <!-- Outer Shield / Crown J & S Structure -->
+          <path d="M18 36 L38 45 L38 82 L60 95 L82 82 L82 45 L102 36 L102 91 L60 115 L18 91 Z" fill="url(#goldLogoGrad)"/>
+          <!-- Inner Crown Arch & Precision Checkmark -->
+          <path d="M60 12 C44 26 39 43 42 63 L55 76 L92 38 L83 29 L55 58 L51 54 C50 41 53 30 60 22 C67 30 70 41 69 51 L78 42 C78 29 71 20 60 12 Z" fill="url(#goldLogoGrad)"/>
+        </svg>
+        <div>
+          <div class="font-display font-black text-xl sm:text-2xl tracking-wider gold-gradient-text leading-none">
+            JS EXPRESS
+          </div>
+          <div class="text-[10px] sm:text-[11px] font-bold tracking-[0.28em] text-gold/90 mt-1">
+            SINCE 2026
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-gray-300">
+        <a href="#lacak" class="hover:text-gold-bright transition">Lacak Resi</a>
+        <a href="#ongkir" class="hover:text-gold-bright transition">Cek Ongkir</a>
+        <a href="#layanan" class="hover:text-gold-bright transition">Layanan</a>
+        <a href="#filosofi" class="hover:text-gold-bright transition">Filosofi Brand</a>
+        <a href="#kontak" class="hover:text-gold-bright transition">Kontak</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="#kirim" class="gold-gradient-bg text-obsidian font-display font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-gold hover:brightness-110 transition uppercase tracking-wide">
+          Kirim Sekarang!
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg border border-gold/30 text-gold-bright hover:bg-surface" aria-label="Buka Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-charcoal border-t border-gold/20 px-4 py-4 space-y-3 text-sm font-semibold">
+      <a href="#lacak" class="block py-2 text-gray-200 hover:text-gold-bright">Lacak Resi Real-Time</a>
+      <a href="#ongkir" class="block py-2 text-gray-200 hover:text-gold-bright">Kalkulator Ongkir</a>
+      <a href="#layanan" class="block py-2 text-gray-200 hover:text-gold-bright">Layanan Pengiriman</a>
+      <a href="#filosofi" class="block py-2 text-gray-200 hover:text-gold-bright">Filosofi & Makna Logo</a>
+      <a href="#kontak" class="block py-2 text-gray-200 hover:text-gold-bright">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (POSTER-INSPIRED) -->
+  <section id="beranda" class="relative hero-radial speed-lines border-b border-gold/20 overflow-hidden">
+    <!-- Decorative Gold Corner Beams -->
+    <div class="pointer-events-none absolute -top-24 -left-24 w-96 h-96 border-2 border-gold/20 rotate-45"></div>
+    <div class="pointer-events-none absolute -bottom-32 -right-24 w-[28rem] h-[28rem] border-2 border-gold/20 rotate-45"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Left Column: Copy & Quick Track -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-gold/40 text-xs font-bold tracking-wider uppercase text-gold-bright">
+            <span class="w-2 h-2 rounded-full bg-gold-bright pulse-gold"></span>
+            Kirim Cepat, Sampai Selamat • Official Portal
+          </div>
+
+          <h1 class="font-display font-black italic text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight uppercase">
+            <span class="gold-gradient-text block">KIRIM CEPAT,</span>
+            <span class="gold-gradient-text block mt-1">USAHA MELESAT!</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-200 max-w-2xl leading-relaxed">
+            Solusi Pengiriman <strong class="text-gold-bright font-bold">Kilat &amp; Terpercaya</strong> untuk Sukseskan Bisnismu. Dikelola dengan integritas personal dan standar keamanan emas hingga paket tiba di tujuan.
+          </p>
+
+          <!-- Instant Quick-Track Box -->
+          <div class="bg-surface/90 backdrop-blur border border-gold/35 rounded-2xl p-3 sm:p-4 shadow-gold max-w-2xl">
+            <label for="heroTrackInput" class="block text-xs font-bold uppercase tracking-wider text-gold-bright mb-2">
+              Lacak Paket Instan (Contoh: JSE-2026-8891)
+            </label>
+            <div class="flex flex-col sm:flex-row gap-2.5">
+              <input
+                id="heroTrackInput"
+                type="text"
+                placeholder="Masukkan Nomor Resi JS Express..."
+                class="flex-1 bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-bright uppercase"
+              />
+              <button
+                onclick="quickTrackFromHero()"
+                class="gold-gradient-bg text-obsidian font-display font-extrabold text-sm px-6 py-3 rounded-xl hover:brightness-110 transition uppercase tracking-wide shrink-0"
+              >
+                Lacak Sekarang
+              </button>
+            </div>
+          </div>
+
+          <!-- Primary CTA & App Badges -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#kirim" class="gold-gradient-bg text-obsidian font-display font-black text-base px-8 py-4 rounded-xl shadow-gold-lg hover:scale-[1.02] transition uppercase tracking-wider">
+              KIRIM SEKARANG!
+            </a>
+            <a href="https://wa.me/6287873876864?text=Halo%20JS%20Express%20(www.jseexpress.com),%20saya%20ingin%20konsultasi%20pengiriman%20paket." target="_blank" rel="noopener" class="px-6 py-4 rounded-xl bg-surface border border-gold/40 text-white font-bold text-sm hover:border-gold-bright hover:text-gold-bright transition inline-flex items-center gap-2">
+              <svg class="w-5 h-5 text-gold-bright" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              WhatsApp 087873876864
+            </a>
+          </div>
+
+          <!-- Store Badges & Official Website -->
+          <div class="pt-3 flex flex-wrap items-center gap-4 text-xs text-gray-400">
+            <div class="inline-flex items-center gap-2.5 bg-obsidian border border-gray-700 px-3.5 py-2 rounded-lg">
+              <svg class="w-5 h-5 text-gold-bright" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+              <div>
+                <div class="text-[9px] uppercase tracking-wider text-gray-400">GET IT ON</div>
+                <div class="text-white font-bold text-xs">Google Play</div>
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-2.5 bg-obsidian border border-gray-700 px-3.5 py-2 rounded-lg">
+              <svg class="w-5 h-5 text-gold-bright" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/></svg>
+              <div>
+                <div class="text-[9px] uppercase tracking-wider text-gray-400">Download on the</div>
+                <div class="text-white font-bold text-xs">App Store</div>
+              </div>
+            </div>
+            <span class="text-gold-bright font-semibold">www.jseexpress.com</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase Card (Courier & Brand Identity) -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-gradient-to-b from-surface to-obsidian border border-gold/40 rounded-3xl p-6 sm:p-8 shadow-gold-lg">
+            <!-- Floating Metric Badges (Matching Poster Icons) -->
+            <div class="absolute -top-4 -left-3 bg-obsidian border border-gold/60 rounded-2xl px-4 py-2.5 shadow-gold flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg gold-gradient-bg text-obsidian flex items-center justify-center font-bold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <div>
+                <div class="text-[10px] text-gray-400 uppercase font-bold">Performa Bisnis</div>
+                <div class="text-xs font-extrabold text-gold-bright">99.4% Tepat Waktu</div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-4 -right-3 bg-obsidian border border-gold/60 rounded-2xl px-4 py-2.5 shadow-gold flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg gold-gradient-bg text-obsidian flex items-center justify-center font-bold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-[10px] text-gray-400 uppercase font-bold">Jangkauan Nasional</div>
+                <div class="text-xs font-extrabold text-white">514 Kota &amp; Kabupaten</div>
+              </div>
+            </div>
+
+            <!-- Brand Identity Visual Crest -->
+            <div class="text-center py-6 space-y-5">
+              <div class="inline-flex p-5 rounded-3xl bg-obsidian/90 border border-gold/30 shadow-inner">
+                <svg class="w-28 h-28" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="crestGrad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#F9E076"/>
+                      <stop offset="50%" stop-color="#D4AF37"/>
+                      <stop offset="100%" stop-color="#9E7B1C"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="33" cy="22" r="8.5" fill="url(#crestGrad)"/>
+                  <circle cx="87" cy="22" r="8.5" fill="url(#crestGrad)"/>
+                  <path d="M18 36 L38 45 L38 82 L60 95 L82 82 L82 45 L102 36 L102 91 L60 115 L18 91 Z" fill="url(#crestGrad)"/>
+                  <path d="M60 12 C44 26 39 43 42 63 L55 76 L92 38 L83 29 L55 58 L51 54 C50 41 53 30 60 22 C67 30 70 41 69 51 L78 42 C78 29 71 20 60 12 Z" fill="url(#crestGrad)"/>
+                </svg>
+              </div>
+
+              <div>
+                <div class="font-display font-black text-3xl tracking-wider gold-gradient-text">JS EXPRESS</div>
+                <div class="text-xs font-bold tracking-[0.32em] text-gold mt-1">SINCE 2026</div>
+                <p class="text-sm text-gray-300 mt-3 italic">"Kirim Cepat, Sampai Selamat"</p>
+              </div>
+
+              <!-- 3 Core Brand Pillars -->
+              <div class="grid grid-cols-3 gap-2.5 pt-3 border-t border-gold/20 text-center">
+                <div class="bg-obsidian/80 rounded-xl p-3 border border-gold/20">
+                  <div class="text-gold-bright font-display font-extrabold text-sm">CEPAT</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">Eksekusi Kilat</div>
+                </div>
+                <div class="bg-obsidian/80 rounded-xl p-3 border border-gold/20">
+                  <div class="text-gold-bright font-display font-extrabold text-sm">AMAN</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">Perisai Proteksi</div>
+                </div>
+                <div class="bg-obsidian/80 rounded-xl p-3 border border-gold/20">
+                  <div class="text-gold-bright font-display font-extrabold text-sm">TERPERCAYA</div>
+                  <div class="text-[11px] text-gray-400 mt-0.5">Integritas Emas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Highlight Feature Cards -->
+      <div class="grid md:grid-cols-3 gap-6 mt-14">
+        <div class="bg-surface/80 backdrop-blur rounded-2xl p-6 gold-border-glow">
+          <div class="w-11 h-11 rounded-xl gold-gradient-bg text-obsidian flex items-center justify-center mb-4 font-bold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Pengiriman Kilat Tanpa Tunda</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Sistem sortir otomatis dan armada kurir sigap memastikan paket langsung meluncur di hari yang sama.
+          </p>
+        </div>
+
+        <div class="bg-surface/80 backdrop-blur rounded-2xl p-6 gold-border-glow">
+          <div class="w-11 h-11 rounded-xl gold-gradient-bg text-obsidian flex items-center justify-center mb-4 font-bold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Jaminan Sampai Selamat</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Setiap paket dirawat dengan penuh kepedulian layaknya barang milik keluarga sendiri dengan proteksi berlapis.
+          </p>
+        </div>
+
+        <div class="bg-surface/80 backdrop-blur rounded-2xl p-6 gold-border-glow">
+          <div class="w-11 h-11 rounded-xl gold-gradient-bg text-obsidian flex items-center justify-center mb-4 font-bold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Akselerator UMKM &amp; Korporasi</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Tarif kompetitif, penjemputan gratis, dan manajemen pergudangan terpadu agar usahamu semakin melesat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: LACAK RESI REAL-TIME & KALKULATOR ONGKIR -->
+  <section id="lacak" class="py-20 bg-charcoal border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10">
+        
+        <!-- LEFT: LACAK RESI REAL-TIME -->
+        <div class="lg:col-span-7 bg-surface border border-gold/30 rounded-3xl p-6 sm:p-8 shadow-gold">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-gold-bright">Sistem Pelacakan Terpadu</span>
+              <h2 class="font-display font-black text-2xl sm:text-3xl text-white mt-1">Lacak Resi Real-Time</h2>
+            </div>
+            <span class="text-xs bg-obsidian border border-gold/30 text-gold-bright px-3 py-1.5 rounded-full font-semibold">
+              www.jseexpress.com
+            </span>
+          </div>
+
+          <!-- Input Bar -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input
+              id="trackingInput"
+              type="text"
+              value="JSE-2026-8891"
+              placeholder="Ketik nomor resi (contoh: JSE-2026-8891)"
+              class="flex-1 bg-obsidian border border-gold/40 rounded-xl px-4 py-3.5 text-white font-semibold tracking-wider uppercase focus:outline-none focus:border-gold-bright"
+            />
+            <button
+              onclick="trackShipment()"
+              class="gold-gradient-bg text-obsidian font-display font-extrabold px-6 py-3.5 rounded-xl hover:brightness-110 transition uppercase text-sm tracking-wide"
+            >
+              Cek Status
+            </button>
+          </div>
+
+          <!-- Sample Clickable Resi Chips -->
+          <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
+            <span class="text-gray-400">Contoh Resi Siap Klik:</span>
+            <button onclick="selectSampleResi('JSE-2026-8891')" class="px-3 py-1 rounded-lg bg-obsidian border border-gold/30 text-gold-bright hover:bg-gold hover:text-obsidian font-mono font-bold transition">
+              JSE-2026-8891
+            </button>
+            <button onclick="selectSampleResi('JSE-2026-4412')" class="px-3 py-1 rounded-lg bg-obsidian border border-gold/30 text-gold-bright hover:bg-gold hover:text-obsidian font-mono font-bold transition">
+              JSE-2026-4412
+            </button>
+            <button onclick="selectSampleResi('JSE-2026-7730')" class="px-3 py-1 rounded-lg bg-obsidian border border-gold/30 text-gold-bright hover:bg-gold hover:text-obsidian font-mono font-bold transition">
+              JSE-2026-7730
+            </button>
+          </div>
+
+          <!-- Dynamic Tracking Output -->
+          <div id="trackingResult" class="mt-7 bg-obsidian border border-gold/25 rounded-2xl p-5 sm:p-6">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- RIGHT: KALKULATOR ONGKIR OTOMATIS -->
+        <div id="ongkir" class="lg:col-span-5 bg-surface border border-gold/30 rounded-3xl p-6 sm:p-8 shadow-gold flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-gold-bright">Estimasi Transparan</span>
+            <h2 class="font-display font-black text-2xl sm:text-3xl text-white mt-1">Cek Tarif Ongkir</h2>
+            <p class="text-sm text-gray-400 mt-1">Hitung estimasi biaya pengiriman antar kota secara instan.</p>
+
+            <form id="rateForm" class="mt-6 space-y-4" onsubmit="event.preventDefault(); calculateRate();">
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Kota Asal</label>
+                <select id="originCity" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright">
+                  <option value="Jakarta">DKI Jakarta (Hub Pusat)</option>
+                  <option value="Bogor">Bogor / Citeureup</option>
+                  <option value="Bandung">Bandung</option>
+                  <option value="Surabaya">Surabaya</option>
+                  <option value="Medan">Medan</option>
+                  <option value="Makassar">Makassar</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Kota Tujuan</label>
+                <select id="destCity" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright">
+                  <option value="Surabaya">Surabaya</option>
+                  <option value="Jakarta">DKI Jakarta</option>
+                  <option value="Bandung">Bandung</option>
+                  <option value="Semarang">Semarang</option>
+                  <option value="Yogyakarta">Yogyakarta</option>
+                  <option value="Denpasar">Denpasar (Bali)</option>
+                  <option value="Medan">Medan</option>
+                  <option value="Makassar">Makassar</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Berat (Kg)</label>
+                  <input id="pkgWeight" type="number" min="1" max="500" value="2" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Jenis Layanan</label>
+                  <select id="serviceSelect" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright">
+                    <option value="kilat">JS Kilat (1 Hari)</option>
+                    <option value="reguler">JS Reguler (2-3 Hari)</option>
+                    <option value="kargo">JS Kargo &amp; Gudang</option>
+                    <option value="umkm">JS Mitra UMKM</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full gold-gradient-bg text-obsidian font-display font-extrabold py-3.5 rounded-xl hover:brightness-110 transition uppercase text-sm tracking-wide">
+                Hitung Ongkir Sekarang
+              </button>
+            </form>
+          </div>
+
+          <!-- Rate Result Box -->
+          <div id="rateResultBox" class="mt-6 bg-obsidian border border-gold/40 rounded-2xl p-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-xs text-gray-400">Estimasi Biaya Kirim</div>
+                <div id="ratePriceDisplay" class="font-display font-black text-2xl gold-gradient-text mt-0.5">Rp 36.000</div>
+                <div id="rateEtaDisplay" class="text-xs text-gray-300 mt-0.5">Estimasi Tiba: 1 Hari Kerja (JS Kilat)</div>
+              </div>
+              <button onclick="transferRateToBooking()" class="px-4 py-2.5 rounded-xl bg-surface border border-gold/50 text-gold-bright hover:bg-gold hover:text-obsidian text-xs font-extrabold transition">
+                Buat Resi →
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: LAYANAN UNGGULAN -->
+  <section id="layanan" class="py-20 bg-obsidian border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-bright">Kategori Pengangkutan &amp; Pergudangan</span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white mt-2">Layanan Utama JS Express</h2>
+        <p class="text-gray-400 mt-3 text-sm sm:text-base">
+          Dirancang untuk memenuhi kebutuhan individu maupun pelaku usaha usia produktif (17–60 tahun) dengan standar ketepatan waktu dan keamanan berlapis.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service 1 -->
+        <div class="bg-surface rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="px-3 py-1 rounded-full bg-gold/15 text-gold-bright text-xs font-extrabold">PRIORITAS</span>
+              <span class="text-gold font-display font-black text-lg">01</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-white">JS Kilat</h3>
+            <p class="text-sm text-gray-400 mt-2.5 leading-relaxed">
+              Pengiriman ekspres Same-Day &amp; Next-Day untuk dokumen penting dan paket mendesak dengan jalur prioritas.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gold-bright font-bold">Estimasi: 6–24 Jam</span>
+            <a href="#kirim" onclick="presetService('JS Kilat')" class="text-white hover:text-gold-bright font-semibold">Pilih →</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-surface rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="px-3 py-1 rounded-full bg-gold/15 text-gold-bright text-xs font-extrabold">POPULER</span>
+              <span class="text-gold font-display font-black text-lg">02</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-white">JS Reguler Terpercaya</h3>
+            <p class="text-sm text-gray-400 mt-2.5 leading-relaxed">
+              Solusi pengiriman harian ekonomis ke seluruh pelosok Indonesia dengan pelacakan transparan setiap titik.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gold-bright font-bold">Estimasi: 2–3 Hari</span>
+            <a href="#kirim" onclick="presetService('JS Reguler Terpercaya')" class="text-white hover:text-gold-bright font-semibold">Pilih →</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-surface rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="px-3 py-1 rounded-full bg-gold/15 text-gold-bright text-xs font-extrabold">LOGISTIK BERAT</span>
+              <span class="text-gold font-display font-black text-lg">03</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-white">JS Kargo &amp; Pergudangan</h3>
+            <p class="text-sm text-gray-400 mt-2.5 leading-relaxed">
+              Layanan pengangkutan skala besar, distribusi B2B, serta fasilitas penyimpanan gudang aman dan terorganisir.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gold-bright font-bold">Mulai 10 Kg+</span>
+            <a href="#kirim" onclick="presetService('JS Kargo & Pergudangan')" class="text-white hover:text-gold-bright font-semibold">Pilih →</a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-surface rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="px-3 py-1 rounded-full bg-gold/15 text-gold-bright text-xs font-extrabold">UNTUK BISNIS</span>
+              <span class="text-gold font-display font-black text-lg">04</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-white">JS Mitra Bisnis &amp; UMKM</h3>
+            <p class="text-sm text-gray-400 mt-2.5 leading-relaxed">
+              Kemitraan khusus seller online &amp; UMKM dengan gratis penjemputan paket, dukungan COD, dan dashboard resi.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between text-xs">
+            <span class="text-gold-bright font-bold">Gratis Pick-Up</span>
+            <a href="#kirim" onclick="presetService('JS Mitra Bisnis & UMKM')" class="text-white hover:text-gold-bright font-semibold">Pilih →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: FILOSOFI BRAND & BEDAH MAKNA LOGO INTERAKTIF -->
+  <section id="filosofi" class="py-20 bg-charcoal border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left: Brand Story & Character -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-gold-bright">Identitas &amp; Rasionalisasi Merek</span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white leading-tight">
+            Integritas Personal <span class="gold-gradient-text">Juliana Sigit (JS)</span> dalam Setiap Pengiriman
+          </h2>
+          <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+            Nama <strong class="text-white">JS</strong> berasal dari inisial pendiri, <strong class="text-gold-bright">Juliana Sigit</strong>. Penggunaan nama pribadi sebagai fondasi merek menghadirkan rasa tanggung jawab yang tinggi, integritas personal, dan komitmen tulus bahwa setiap paket diperlakukan dengan penuh kepedulian layaknya barang milik keluarga sendiri.
+          </p>
+
+          <!-- Brand Archetypes -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-surface border border-gold/30 rounded-2xl p-5">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-gold-bright">Karakter 01</div>
+              <h3 class="font-display font-bold text-lg text-white mt-1">The Everyday Hero</h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+                Sosok kurir yang sigap, tangguh, selalu bisa diandalkan, dan bekerja taktis tanpa berbelit-belit di lapangan.
+              </p>
+            </div>
+            <div class="bg-surface border border-gold/30 rounded-2xl p-5">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-gold-bright">Karakter 02</div>
+              <h3 class="font-display font-bold text-lg text-white mt-1">The Royal Diplomat</h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+                Menghadirkan kesantunan, profesionalisme berkelas, dan standar kualitas layanan emas yang ramah bagi pelanggan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Logo Anatomy Explorer -->
+        <div class="lg:col-span-6 bg-surface border border-gold/35 rounded-3xl p-6 sm:p-8 shadow-gold">
+          <div class="flex items-center justify-between mb-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-gold-bright">Eksplorasi Visual</span>
+              <h3 class="font-display font-extrabold text-xl text-white">Bedah Makna Logo JS Express</h3>
+            </div>
+            <span class="text-xs text-gray-400">Klik elemen di bawah</span>
+          </div>
+
+          <!-- Interactive Anatomy Buttons -->
+          <div class="grid grid-cols-2 gap-2.5 mb-6">
+            <button onclick="showLogoMeaning('js')" id="btn-logo-js" class="logo-tab-btn px-3.5 py-2.5 rounded-xl text-left text-xs font-bold border border-gold-bright bg-gold/15 text-gold-bright transition">
+              1. Inisial J &amp; S (Perisai)
+            </button>
+            <button onclick="showLogoMeaning('check')" id="btn-logo-check" class="logo-tab-btn px-3.5 py-2.5 rounded-xl text-left text-xs font-bold border border-gray-700 bg-obsidian text-gray-300 hover:border-gold/50 transition">
+              2. Tanda Centang (Ketepatan)
+            </button>
+            <button onclick="showLogoMeaning('human')" id="btn-logo-human" class="logo-tab-btn px-3.5 py-2.5 rounded-xl text-left text-xs font-bold border border-gray-700 bg-obsidian text-gray-300 hover:border-gold/50 transition">
+              3. Dua Figur Manusia
+            </button>
+            <button onclick="showLogoMeaning('color')" id="btn-logo-color" class="logo-tab-btn px-3.5 py-2.5 rounded-xl text-left text-xs font-bold border border-gray-700 bg-obsidian text-gray-300 hover:border-gold/50 transition">
+              4. Emas, Hitam &amp; Tipografi
+            </button>
+          </div>
+
+          <!-- Explanation Display Box -->
+          <div id="logoMeaningBox" class="bg-obsidian border border-gold/30 rounded-2xl p-5 space-y-2.5">
+            <div class="text-gold-bright font-display font-extrabold text-base">
+              Inisial Pendiri &amp; Jaringan (Perisai &amp; Mahkota J &amp; S)
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Bentuk geometris menggabungkan inisial <strong>J (Juliana)</strong> dan <strong>S (Sigit)</strong> yang membentuk struktur perisai dan mahkota. Simbol ini melambangkan integritas personal, komitmen tinggi, serta perlindungan penuh atas keamanan setiap paket pelanggan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: BUAT RESI DIGITAL (BOOKING & E-WAYBILL GENERATOR) -->
+  <section id="kirim" class="py-20 bg-obsidian border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-bright">Pemesanan Instan</span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white mt-2">Buat Resi Digital Sekarang</h2>
+        <p class="text-gray-400 mt-2 text-sm sm:text-base">
+          Terbitkan kode resi otomatis <span class="text-gold-bright font-semibold">JSE-2026-XXXX</span> yang langsung aktif di sistem pelacakan dan terhubung ke WhatsApp resmi kami.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Booking Form -->
+        <form id="bookingForm" onsubmit="event.preventDefault(); generateDigitalWaybill();" class="lg:col-span-7 bg-surface border border-gold/30 rounded-3xl p-6 sm:p-8 space-y-5 shadow-gold">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Nama Pengirim</label>
+              <input id="senderName" type="text" required placeholder="Contoh: Juliana Sigit" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">No. HP / WhatsApp Pengirim</label>
+              <input id="senderPhone" type="tel" required placeholder="087873876864" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Nama Penerima</label>
+              <input id="receiverName" type="text" required placeholder="Nama lengkap penerima" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Kota Tujuan</label>
+              <input id="bookingDest" type="text" required value="Surabaya" placeholder="Kota tujuan pengiriman" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Layanan</label>
+              <select id="bookingService" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright">
+                <option value="JS Kilat">JS Kilat</option>
+                <option value="JS Reguler Terpercaya">JS Reguler Terpercaya</option>
+                <option value="JS Kargo & Pergudangan">JS Kargo &amp; Pergudangan</option>
+                <option value="JS Mitra Bisnis & UMKM">JS Mitra Bisnis &amp; UMKM</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Berat Paket (Kg)</label>
+              <input id="bookingWeight" type="number" min="1" value="2" required class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-300 mb-1.5">Isi Paket</label>
+              <input id="bookingItem" type="text" required placeholder="Dokumen / Produk UMKM" class="w-full bg-obsidian border border-gold/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-bright" />
+            </div>
+          </div>
+
+          <button type="submit" class="w-full gold-gradient-bg text-obsidian font-display font-black py-4 rounded-xl shadow-gold hover:brightness-110 transition uppercase tracking-wider text-sm">
+            Terbitkan Resi Digital Sekarang
+          </button>
+        </form>
+
+        <!-- Digital E-Waybill Preview Card -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-surface via-obsidian to-charcoal border-2 border-gold/50 rounded-3xl p-6 sm:p-7 shadow-gold-lg">
+          <div class="flex items-center justify-between border-b border-gold/25 pb-4">
+            <div>
+              <div class="font-display font-black text-lg gold-gradient-text">JS EXPRESS</div>
+              <div class="text-[11px] text-gold-bright font-semibold">www.jseexpress.com</div>
+            </div>
+            <span class="px-3 py-1 rounded-lg bg-gold/15 border border-gold/40 text-gold-bright font-mono text-xs font-bold">
+              E-WAYBILL
+            </span>
+          </div>
+
+          <div class="my-5 bg-obsidian border border-dashed border-gold/50 rounded-2xl p-4 text-center">
+            <div class="text-[11px] uppercase tracking-widest text-gray-400">Nomor Resi Digital</div>
+            <div id="waybillCode" class="font-mono font-black text-2xl sm:text-3xl text-gold-bright tracking-wider mt-1">
+              JSE-2026-8891
+            </div>
+            <div class="text-[11px] text-gray-400 mt-1">Tagline: Kirim Cepat, Sampai Selamat</div>
+          </div>
+
+          <div class="space-y-2.5 text-xs sm:text-sm">
+            <div class="flex justify-between py-1.5 border-b border-gray-800">
+              <span class="text-gray-400">Pengirim</span>
+              <span id="wbSender" class="text-white font-semibold">Juliana Sigit (Jakarta)</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-gray-800">
+              <span class="text-gray-400">Penerima &amp; Tujuan</span>
+              <span id="wbReceiver" class="text-white font-semibold">Mitra Usaha (Surabaya)</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-gray-800">
+              <span class="text-gray-400">Layanan &amp; Berat</span>
+              <span id="wbService" class="text-gold-bright font-bold">JS Kilat • 2 Kg</span>
+            </div>
+            <div class="flex justify-between py-1.5">
+              <span class="text-gray-400">Isi Paket</span>
+              <span id="wbItem" class="text-white font-semibold">Paket Bisnis Prioritas</span>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-2.5">
+            <button onclick="trackGeneratedResi()" class="w-full py-3 rounded-xl bg-surface border border-gold/50 text-gold-bright hover:bg-gold hover:text-obsidian font-bold text-xs uppercase tracking-wider transition">
+              Lacak Resi Ini di Sistem
+            </button>
+            <a id="waConfirmBtn" href="https://wa.me/6287873876864?text=Halo%20JS%20Express%20(www.jseexpress.com),%20mohon%20konfirmasi%20resi%20JSE-2026-8891." target="_blank" rel="noopener" class="w-full py-3 rounded-xl gold-gradient-bg text-obsidian font-display font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 transition">
+              Konfirmasi via WhatsApp (087873876864)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak" class="bg-charcoal pt-16 pb-10 text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-gold/20">
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="font-display font-black text-2xl gold-gradient-text">JS EXPRESS</span>
+            <span class="text-xs font-bold tracking-widest text-gold border border-gold/40 px-2.5 py-0.5 rounded">SINCE 2026</span>
+          </div>
+          <p class="text-sm text-gray-300 max-w-md leading-relaxed">
+            <strong>Kirim Cepat, Usaha Melesat!</strong> — Solusi pengiriman kilat dan terpercaya yang dibangun di atas komitmen integritas Juliana Sigit untuk menjaga keamanan setiap paket hingga sampai selamat.
+          </p>
+          <div class="text-sm space-y-1.5 pt-1">
+            <div>Website Resmi: <a href="https://www.jseexpress.com" target="_blank" rel="noopener" class="text-gold-bright font-bold hover:underline">www.jseexpress.com</a></div>
+            <div>WhatsApp / Hotline: <a href="https://wa.me/6287873876864" target="_blank" rel="noopener" class="text-white font-semibold hover:text-gold-bright">087873876864</a></div>
+            <div>Instagram Resmi: <span class="text-gold-bright font-semibold">@jsexpress.id</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white uppercase text-xs tracking-wider mb-4">Navigasi Cepat</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#beranda" class="hover:text-gold-bright transition">Beranda</a></li>
+            <li><a href="#lacak" class="hover:text-gold-bright transition">Lacak Resi Real-Time</a></li>
+            <li><a href="#ongkir" class="hover:text-gold-bright transition">Cek Tarif Ongkir</a></li>
+            <li><a href="#layanan" class="hover:text-gold-bright transition">Layanan Pengiriman</a></li>
+            <li><a href="#filosofi" class="hover:text-gold-bright transition">Filosofi &amp; Makna Logo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white uppercase text-xs tracking-wider mb-4">Janji Brand</h4>
+          <p class="text-sm text-gray-300 italic">"Kirim Cepat, Sampai Selamat"</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-obsidian border border-gold/30 text-gold-bright text-xs font-bold">Cepat</span>
+            <span class="px-3 py-1 rounded-full bg-obsidian border border-gold/30 text-gold-bright text-xs font-bold">Aman</span>
+            <span class="px-3 py-1 rounded-full bg-obsidian border border-gold/30 text-gold-bright text-xs font-bold">Terpercaya</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div>© 2026 JS Express (Juliana Sigit). Seluruh Hak Cipta Dilindungi.</div>
+        <div>Portal Resmi: <a href="https://www.jseexpress.com" target="_blank" rel="noopener" class="text-gold-bright hover:underline">www.jseexpress.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE JAVASCRIPT -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Shipment Database (Pre-populated + dynamically updated when user creates a new resi)
+    const shipmentDB = {
+      'JSE-2026-8891': {
+        resi: 'JSE-2026-8891',
+        status: 'SAMPAI SELAMAT (DELIVERED)',
+        badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+        service: 'JS Kilat',
+        route: 'Jakarta → Surabaya',
+        receiver: 'Budi Santoso (Diterima Langsung)',
+        timeline: [
+          { time: 'Hari Ini, 14:20 WIB', title: 'Paket Diterima dengan Selamat', desc: 'Diterima oleh Ybs (Budi Santoso) di Surabaya dalam kondisi utuh & tersegel.' },
+          { time: 'Hari Ini, 11:05 WIB', title: 'Kurir JS Express Menuju Alamat Tujuan', desc: 'Kurir The Everyday Hero sedang mengantar paket ke lokasi penerima.' },
+          { time: 'Hari Ini, 06:30 WIB', title: 'Tiba di Hub Sortir Surabaya', desc: 'Paket lolos pemindaian keamanan berlapis di Gudang Surabaya.' },
+          { time: 'Kemarin, 19:15 WIB', title: 'Paket Diberangkatkan dari Jakarta', desc: 'Proses pemuatan jalur ekspres JS Kilat menuju Surabaya.' }
+        ]
+      },
+      'JSE-2026-4412': {
+        resi: 'JSE-2026-4412',
+        status: 'SEDANG DIANTAR KURIR (ON DELIVERY)',
+        badgeColor: 'bg-amber-500/20 text-gold-bright border-gold/50',
+        service: 'JS Mitra Bisnis & UMKM',
+        route: 'Bandung → Jakarta',
+        receiver: 'Rina Wijaya',
+        timeline: [
+          { time: 'Hari Ini, 09:45 WIB', title: 'Kurir Dalam Perjalanan ke Tujuan', desc: 'Kurir JS Express sedang membawa paket menuju alamat penerima di Jakarta.' },
+          { time: 'Hari Ini, 07:10 WIB', title: 'Tiba di Hub Distribusi Jakarta', desc: 'Paket selesai disortir untuk pengiriman sesi pagi.' },
+          { time: 'Kemarin, 17:00 WIB', title: 'Pick-Up dari Mitra UMKM Bandung', desc: 'Paket dijemput langsung oleh tim JS Express Bandung.' }
+        ]
+      },
+      'JSE-2026-7730': {
+        resi: 'JSE-2026-7730',
+        status: 'PROSES TRANSIT GUDANG (IN TRANSIT)',
+        badgeColor: 'bg-sky-500/20 text-sky-300 border-sky-500/40',
+        service: 'JS Kargo & Pergudangan',
+        route: 'Jakarta → Medan',
+        receiver: 'CV Maju Bersama Logistik',
+        timeline: [
+          { time: 'Hari Ini, 08:15 WIB', title: 'Transit Kargo Udara Ekspres', desc: 'Kargo 25 Kg telah terverifikasi dan dijadwalkan mendarat di Hub Medan.' },
+          { time: 'Kemarin, 21:00 WIB', title: 'Verifikasi Pergudangan Jakarta', desc: 'Pemeriksaan berat, dimensi, dan segel pengaman selesai.' }
+        ]
+      }
+    };
+
+    function renderTracking(resiCode) {
+      const code = resiCode.trim().toUpperCase();
+      const container = document.getElementById('trackingResult');
+      const data = shipmentDB[code];
+
+      if (!data) {
+        container.innerHTML = `
+          <div class="text-center py-6 space-y-2">
+            <div class="text-gold-bright font-display font-bold text-base">Nomor Resi "${code}" Belum Ditemukan</div>
+            <p class="text-xs text-gray-400">Pastikan format resi benar (contoh: <span class="text-white font-mono">JSE-2026-8891</span>) atau buat resi baru di bagian bawah halaman ini.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const timelineHtml = data.timeline.map((step, idx) => `
+        <div class="relative pl-6 pb-5 last:pb-0 border-l ${idx === 0 ? 'border-gold-bright' : 'border-gray-700'}">
+          <span class="absolute -left-[6.5px] top-1 w-3 h-3 rounded-full ${idx === 0 ? 'bg-gold-bright ring-4 ring-gold/20' : 'bg-gray-600'}"></span>
+          <div class="text-[11px] text-gold-bright font-semibold">${step.time}</div>
+          <div class="text-sm font-bold text-white mt-0.5">${step.title}</div>
+          <div class="text-xs text-gray-400 mt-0.5">${step.desc}</div>
+        </div>
+      `).join('');
+
+      container.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-gray-800">
+          <div>
+            <div class="text-xs text-gray-400">Nomor Resi Terverifikasi • <span class="text-gold-bright">www.jseexpress.com</span></div>
+            <div class="font-mono font-black text-xl text-white mt-0.5">${data.resi}</div>
+            <div class="text-xs text-gray-300 mt-1">${data.route} • <strong class="text-gold-bright">${data.service}</strong></div>
+          </div>
+          <span class="px-3.5 py-1.5 rounded-full border text-xs font-extrabold ${data.badgeColor}">
+            ${data.status}
+          </span>
+        </div>
+        <div class="space-y-1">${timelineHtml}</div>
+      `;
+    }
+
+    function trackShipment() {
+      const val = document.getElementById('trackingInput').value;
+      renderTracking(val);
+    }
+
+    function selectSampleResi(code) {
+      document.getElementById('trackingInput').value = code;
+      renderTracking(code);
+    }
+
+    function quickTrackFromHero() {
+      const val = document.getElementById('heroTrackInput').value.trim() || 'JSE-2026-8891';
+      document.getElementById('trackingInput').value = val;
+      renderTracking(val);
+      document.getElementById('lacak').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Shipping Rate Calculator
+    function calculateRate() {
+      const origin = document.getElementById('originCity').value;
+      const dest = document.getElementById('destCity').value;
+      const weight = Math.max(1, parseInt(document.getElementById('pkgWeight').value || '1', 10));
+      const service = document.getElementById('serviceSelect').value;
+
+      const baseRates = {
+        kilat: { rate: 18000, eta: '1 Hari Kerja (JS Kilat)' },
+        reguler: { rate: 11000, eta: '2–3 Hari Kerja (JS Reguler)' },
+        kargo: { rate: 7500, eta: '3–5 Hari Kerja (JS Kargo & Gudang)' },
+        umkm: { rate: 9500, eta: '1–2 Hari Kerja (JS Mitra UMKM)' }
+      };
+
+      const distanceMultiplier = origin === dest ? 0.75 : (['Medan', 'Makassar', 'Denpasar'].includes(dest) ? 1.45 : 1.0);
+      const total = Math.round((baseRates[service].rate * weight * distanceMultiplier) / 500) * 500;
+
+      document.getElementById('ratePriceDisplay').textContent = 'Rp ' + total.toLocaleString('id-ID');
+      document.getElementById('rateEtaDisplay').textContent = 'Estimasi Tiba: ' + baseRates[service].eta;
+    }
+
+    function transferRateToBooking() {
+      const dest = document.getElementById('destCity').value;
+      const weight = document.getElementById('pkgWeight').value;
+      const serviceVal = document.getElementById('serviceSelect').value;
+      const mapService = {
+        kilat: 'JS Kilat',
+        reguler: 'JS Reguler Terpercaya',
+        kargo: 'JS Kargo & Pergudangan',
+        umkm: 'JS Mitra Bisnis & UMKM'
+      };
+      document.getElementById('bookingDest').value = dest;
+      document.getElementById('bookingWeight').value = weight;
+      document.getElementById('bookingService').value = mapService[serviceVal];
+      document.getElementById('kirim').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function presetService(serviceName) {
+      document.getElementById('bookingService').value = serviceName;
+    }
+
+    // Interactive Logo Meaning Explorer
+    const logoMeanings = {
+      js: {
+        title: 'Inisial Pendiri & Jaringan (Perisai & Mahkota J & S)',
+        body: 'Bentuk geometris di sisi kiri menggabungkan inisial <strong>J (Juliana)</strong> dan <strong>S (Sigit)</strong> yang membentuk struktur perisai dan mahkota. Simbol ini melambangkan integritas personal, komitmen tinggi, serta perlindungan penuh atas keamanan setiap paket yang dipercayakan kepada JS Express.'
+      },
+      check: {
+        title: 'Tanda Centang (Check Mark) — Ketepatan & Kepastian',
+        body: 'Lengkungan tegas di bagian tengah logo membentuk tanda centang yang menggambarkan kepastian, ketepatan waktu pengiriman, serta jaminan penyelesaian tugas dengan sempurna (<em>done right</em>).'
+      },
+      human: {
+        title: 'Dua Figur Manusia — Sinergi & Pelayanan Humanis',
+        body: 'Dua titik di bagian atas yang menyatu dengan garis melengkung menyerupai dua figur manusia yang saling terhubung, melambangkan sinergi, kepercayaan, dan hubungan hangat antara perusahaan, mitra, dan pelanggan.'
+      },
+      color: {
+        title: 'Warna Emas, Hitam & Tipografi Bold Modern',
+        body: '<strong>Emas (Gold)</strong> mencerminkan kualitas layanan premium dan penghargaan atas setiap barang kiriman sebagai aset berharga. <strong>Hitam (Black)</strong> menghadirkan kesan profesional, tangguh, dan elegan, diperkuat tipografi <strong>JS EXPRESS</strong> yang tebal dan tegas.'
+      }
+    };
+
+    function showLogoMeaning(key) {
+      document.querySelectorAll('.logo-tab-btn').forEach(btn => {
+        btn.classList.remove('border-gold-bright', 'bg-gold/15', 'text-gold-bright');
+        btn.classList.add('border-gray-700', 'bg-obsidian', 'text-gray-300');
+      });
+      const activeBtn = document.getElementById('btn-logo-' + key);
+      activeBtn.classList.remove('border-gray-700', 'bg-obsidian', 'text-gray-300');
+      activeBtn.classList.add('border-gold-bright', 'bg-gold/15', 'text-gold-bright');
+
+      const item = logoMeanings[key];
+      document.getElementById('logoMeaningBox').innerHTML = `
+        <div class="text-gold-bright font-display font-extrabold text-base">${item.title}</div>
+        <p class="text-sm text-gray-300 leading-relaxed">${item.body}</p>
+      `;
+    }
+
+    // Digital Waybill Generator
+    let latestResi = 'JSE-2026-8891';
+
+    function generateDigitalWaybill() {
+      const sender = document.getElementById('senderName').value.trim();
+      const phone = document.getElementById('senderPhone').value.trim();
+      const receiver = document.getElementById('receiverName').value.trim();
+      const dest = document.getElementById('bookingDest').value.trim();
+      const service = document.getElementById('bookingService').value;
+      const weight = document.getElementById('bookingWeight').value;
+      const item = document.getElementById('bookingItem').value.trim();
+
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      const newCode = `JSE-2026-${randomNum}`;
+      latestResi = newCode;
+
+      // Update Digital E-Waybill Card
+      document.getElementById('waybillCode').textContent = newCode;
+      document.getElementById('wbSender').textContent = `${sender} (${phone})`;
+      document.getElementById('wbReceiver').textContent = `${receiver} (${dest})`;
+      document.getElementById('wbService').textContent = `${service} • ${weight} Kg`;
+      document.getElementById('wbItem').textContent = item;
+
+      // Register into live tracking database
+      shipmentDB[newCode] = {
+        resi: newCode,
+        status: 'RESI DIGITAL TERBIT (SIAP PICK-UP)',
+        badgeColor: 'bg-amber-500/20 text-gold-bright border-gold/50',
+        service: service,
+        route: `Asal Pengirim → ${dest}`,
+        receiver: receiver,
+        timeline: [
+          {
+            time: 'Baru Saja • Portal www.jseexpress.com',
+            title: 'E-Waybill Digital Diterbitkan',
+            desc: `Paket "${item}" (${weight} Kg) atas nama ${sender} siap dijemput kurir JS Express.`
+          }
+        ]
+      };
+
+      // Update WhatsApp confirmation URL
+      const waText = encodeURIComponent(
+        `Halo JS Express (www.jseexpress.com), saya telah membuat Resi Digital:\n` +
+        `• No. Resi: ${newCode}\n` +
+        `• Pengirim: ${sender} (${phone})\n` +
+        `• Penerima: ${receiver} - ${dest}\n` +
+        `• Layanan: ${service} (${weight} Kg)\n` +
+        `• Isi Paket: ${item}\n` +
+        `Mohon dijadwalkan penjemputan paket. Terima kasih!`
+      );
+      document.getElementById('waConfirmBtn').href = `https://wa.me/6287873876864?text=${waText}`;
+    }
+
+    function trackGeneratedResi() {
+      document.getElementById('trackingInput').value = latestResi;
+      renderTracking(latestResi);
+      document.getElementById('lacak').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize default tracking view
+    renderTracking('JSE-2026-8891');
+  </script>
+</body>
+</html>
